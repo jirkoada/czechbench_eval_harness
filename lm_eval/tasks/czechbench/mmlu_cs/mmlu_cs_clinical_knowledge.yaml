@@ -1,0 +1,6 @@
+"dataset_name": "clinical_knowledge"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_other"
+"task": "mmlu_cs_clinical_knowledge"
+"task_alias": "clinical knowledge"

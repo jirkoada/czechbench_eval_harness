@@ -1,0 +1,6 @@
+"dataset_name": "college_biology"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_stem"
+"task": "mmlu_cs_college_biology"
+"task_alias": "college biology"

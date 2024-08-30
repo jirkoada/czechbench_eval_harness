@@ -1,0 +1,6 @@
+"dataset_name": "sociology"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_social_sciences"
+"task": "mmlu_cs_sociology"
+"task_alias": "sociology"

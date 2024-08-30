@@ -1,0 +1,6 @@
+"dataset_name": "professional_medicine"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_other"
+"task": "mmlu_cs_professional_medicine"
+"task_alias": "professional medicine"

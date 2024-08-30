@@ -1,0 +1,6 @@
+"dataset_name": "medical_genetics"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_other"
+"task": "mmlu_cs_medical_genetics"
+"task_alias": "medical genetics"

@@ -1,0 +1,6 @@
+"dataset_name": "college_medicine"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_other"
+"task": "mmlu_cs_college_medicine"
+"task_alias": "college medicine"

@@ -1,0 +1,6 @@
+"dataset_name": "high_school_government_and_politics"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_social_sciences"
+"task": "mmlu_cs_high_school_government_and_politics"
+"task_alias": "high school government and politics"

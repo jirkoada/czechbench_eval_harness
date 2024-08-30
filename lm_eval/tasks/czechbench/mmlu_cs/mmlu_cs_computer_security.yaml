@@ -1,0 +1,6 @@
+"dataset_name": "computer_security"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_stem"
+"task": "mmlu_cs_computer_security"
+"task_alias": "computer security"

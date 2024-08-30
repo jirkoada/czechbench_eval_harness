@@ -1,0 +1,6 @@
+"dataset_name": "philosophy"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_humanities"
+"task": "mmlu_cs_philosophy"
+"task_alias": "philosophy"

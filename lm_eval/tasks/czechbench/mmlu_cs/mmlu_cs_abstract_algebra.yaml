@@ -1,0 +1,6 @@
+"dataset_name": "abstract_algebra"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_stem"
+"task": "mmlu_cs_abstract_algebra"
+"task_alias": "abstract algebra"

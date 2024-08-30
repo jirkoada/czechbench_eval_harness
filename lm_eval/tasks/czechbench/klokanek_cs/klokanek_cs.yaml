@@ -1,0 +1,24 @@
+task: klokanek_cs
+dataset_path: hynky/klokan-qa
+output_type: generate_until
+test_split: train
+validation_split: train
+process_docs: !function utils.process_docs
+doc_to_text: !function utils.get_prompt
+doc_to_target: !function utils.doc_to_target
+generation_kwargs:
+  until: "\n"
+  max_gen_toks: 32
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+    regexes_to_ignore:
+      - " "
+      - "\n"
+      - "Odpověď"
+      - "[,;.!:'?\"_-]"
+metadata:
+  version: 1.0

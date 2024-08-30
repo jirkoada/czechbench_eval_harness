@@ -1,0 +1,6 @@
+"dataset_name": "moral_scenarios"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_humanities"
+"task": "mmlu_cs_moral_scenarios"
+"task_alias": "moral scenarios"

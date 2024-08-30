@@ -1,0 +1,6 @@
+"dataset_name": "security_studies"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_social_sciences"
+"task": "mmlu_cs_security_studies"
+"task_alias": "security studies"

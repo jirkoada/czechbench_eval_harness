@@ -1,0 +1,6 @@
+"dataset_name": "high_school_physics"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_stem"
+"task": "mmlu_cs_high_school_physics"
+"task_alias": "high school physics"

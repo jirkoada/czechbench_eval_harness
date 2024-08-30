@@ -1,0 +1,6 @@
+"dataset_name": "college_computer_science"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_stem"
+"task": "mmlu_cs_college_computer_science"
+"task_alias": "college computer science"

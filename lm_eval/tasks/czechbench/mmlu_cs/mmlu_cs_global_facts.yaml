@@ -1,0 +1,6 @@
+"dataset_name": "global_facts"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_other"
+"task": "mmlu_cs_global_facts"
+"task_alias": "global facts"

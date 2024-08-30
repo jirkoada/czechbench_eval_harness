@@ -1,0 +1,6 @@
+"dataset_name": "business_ethics"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_other"
+"task": "mmlu_cs_business_ethics"
+"task_alias": "business ethics"

@@ -1,0 +1,6 @@
+"dataset_name": "marketing"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_other"
+"task": "mmlu_cs_marketing"
+"task_alias": "marketing"

@@ -1,0 +1,32 @@
+task: truthfulqa_cs
+dataset_path: CIIRC-NLP/truthful_qa-cs
+dataset_name: shuffled_mc1
+output_type: generate_until
+test_split: validation
+validation_split: validation
+process_docs: !function utils.process_docs
+doc_to_text: !function utils.get_prompt
+doc_to_target: !function utils.doc_to_target
+generation_kwargs:
+  until: "\n"
+  max_gen_toks: 32
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+    regexes_to_ignore:
+      - " "
+      - "\n"
+      - "Odpověď"
+      - "[,;.!?:'\"_-]"
+filter_list:
+  - name: "flexible-extract"
+    filter:
+      - function: "regex"
+        group_select: -1
+        regex_pattern: "[0-9]+"
+      - function: "take_first"
+metadata:
+  version: 1.0

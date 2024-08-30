@@ -1,0 +1,6 @@
+"dataset_name": "machine_learning"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_stem"
+"task": "mmlu_cs_machine_learning"
+"task_alias": "machine learning"

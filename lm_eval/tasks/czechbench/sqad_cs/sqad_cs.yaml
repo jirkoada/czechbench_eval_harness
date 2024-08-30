@@ -1,0 +1,2 @@
+task: sqad_cs
+class: !function utils.SQAD

@@ -1,0 +1,6 @@
+"dataset_name": "public_relations"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_social_sciences"
+"task": "mmlu_cs_public_relations"
+"task_alias": "public relations"

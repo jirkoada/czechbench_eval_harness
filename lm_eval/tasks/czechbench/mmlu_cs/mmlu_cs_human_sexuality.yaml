@@ -1,0 +1,6 @@
+"dataset_name": "human_sexuality"
+"dataset_path": "CIIRC-NLP/mmlu-cs"
+"include": "default_template.yaml"
+"tag": "mmlu_cs_social_sciences"
+"task": "mmlu_cs_human_sexuality"
+"task_alias": "human sexuality"
