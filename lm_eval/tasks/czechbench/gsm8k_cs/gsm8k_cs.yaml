@@ -7,21 +7,26 @@ output_type: generate_until
 doc_to_text: !function utils.get_prompt
 doc_to_target: answer
 metric_list:
-  - metric: custom_acc
-    aggregation: custom_mean
+  - metric: exact_match
+    aggregation: mean
     higher_is_better: true
     ignore_case: true
     ignore_punctuation: false
     regexes_to_ignore:
       - ","
+      - " "
       - "\\$"
       - "(?s).*#### "
       - "\\.$"
 generation_kwargs:
   max_gen_toks: 256
+  until: "\n\n\n"
 filter_list:
-  - name: "custom_filter"
+  - name: "strict-match"
     filter:
-      - function: "custom_filter"  
+      - function: "regex"
+        regex_pattern: "#### ?(-?[0-9.,]+)"
+        group_select: -1
+      - function: "take_first"
 metadata:
   version: 1.0
