@@ -1,3 +1,7 @@
+# CzechBench in ML Evaluation Harness
+
+This fork of the LM Evaluation Harness is dedicated to hosting [CzechBench](lm_eval/tasks/czechbench/), a Czech-focused LLM evaluation suite, originally available as a standalone package [here](https://gitlab.com/jirkoada/czech-bench). You can use the remainder of this README file for further reference on the implementation of LM Evaluation Harness. For CzechBench-specific information, please visit its dedicated [README](lm_eval/tasks/czechbench/).
+
 # Language Model Evaluation Harness
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10256836.svg)](https://doi.org/10.5281/zenodo.10256836)

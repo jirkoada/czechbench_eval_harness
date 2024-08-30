@@ -11,7 +11,8 @@ def _squad_metric(predictions, references):
 
 def _squad_agg(key, items):
     predictions, references = zip(*items)
-    return _squad_metric(predictions=predictions, references=references).get(key, 0)
+    metric = _squad_metric(predictions=predictions, references=references).get(key, 0)
+    return metric / 100.0
 
 
 class SQAD(ConfigurableTask):
