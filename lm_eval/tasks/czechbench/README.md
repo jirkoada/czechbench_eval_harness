@@ -1,6 +1,6 @@
 # CzechBench
 
-Czech-Bench is a collection of LLM benchmarks available for the Czech language. It currently includes 15 Czech benchmarks in total, including new machine translations of the popular ARC, GSM8K, MMLU, and TruthfulQA datasets. All currently supported benchmarks are listed in the table below:
+Czech-Bench is a collection of LLM benchmarks available for the Czech language. It currently consists of 15 Czech benchmarks, including new machine translations of the popular ARC, GSM8K, MMLU, and TruthfulQA datasets. All currently supported benchmarks are listed in the table below:
 
 | Dataset                                                      | Language                      | Task type                  | Metrics        | Samples | Task ID         |
 | ------------------------------------------------------------ | ----------------------------- | -------------------------- | -------------- | ------: | --------------- |
