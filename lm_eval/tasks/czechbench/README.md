@@ -69,7 +69,6 @@ lm_eval --model hf \
     --output_path ~/logs/
 ```
 
-<!---
 Evaluating an Anthropic chat model:
 
 ```bash
@@ -79,7 +78,6 @@ lm_eval --model anthropic-chat-completions \
     --tasks czechbench_tasks \
     --output_path ~/logs/
 ```
---->
 
 Evaluating an OpenAI chat model:
 

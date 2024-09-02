@@ -329,7 +329,7 @@ class AnthropicChat(LocalCompletionsAPI):
             "model": self.model,
             "max_tokens": max_tokens,
             "temperature": temperature,
-            "stop_sequences": stop,
+            # "stop_sequences": stop,
             **gen_kwargs,
         }
         if system:
