@@ -10,17 +10,22 @@ The translation was performed automatically using the [wmt21-dense-24-wide-en-x]
 - Task: Knowledge-Based Question Answering
 - Samples: 817 (Validation set)
 - Few-shot examples: 5 (From validation set, excluded from evaluation)
+- [Hugging Face link](https://huggingface.co/datasets/CIIRC-NLP/truthful_qa-cs)
 
 ### Task description
 
 The model is given a question targeted at common misinformation and a variable-sized set of possible answers, only one of which is correct. It is expected to return the number corresponding to the chosen answer.
 
-The reported accuracy metric represents the percentage of correctly selected answers.
+The reported accuracy metric (exact_match) represents the percentage of correctly selected answers.
 
-## License
+## Citation
 
-The dataset was released under the [Apache License 2.0](LICENSE).
-
-## References
-
-[1] Lin et al., [TruthfulQA: Measuring How Models Mimic Human Falsehoods](https://arxiv.org/abs/2109.07958), 2022
+```bibtex
+@masterthesis{jirkovsky-thesis,
+    author = {Jirkovský, Adam},
+    title = {Benchmarking Techniques for Evaluation of Large Language Models},
+    school = {Czech Technical University in Prague, Faculty of Electrical Engineering},
+    year = 2024,
+    URL = {https://dspace.cvut.cz/handle/10467/115227}
+}
+```

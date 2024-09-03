@@ -12,6 +12,7 @@ The professional_law and us_foreign_policy subtasks are excluded from the evalua
 - Task: Knowledge-Based Question Answering
 - Samples: 12508 (Test set)
 - Few-shot examples: 5 (From the development set for each topic)
+- [Hugging Face link](https://huggingface.co/datasets/CIIRC-NLP/mmlu-cs)
 
 ### Task description
 
@@ -19,10 +20,14 @@ MMLU consists of 57 separate subtasks, 55 of which are used here. Each subtask's
 
 Accuracies for all 55 subtasks are reported, as well as an average accuracy over all test samples.
 
-## License
+## Citation
 
-The dataset was released under the [MIT license](LICENSE).
-
-## References
-
-[1] Hendrycks et al., [Measuring Massive Multitask Language Understanding](https://arxiv.org/abs/2009.03300), 2021
+```bibtex
+@masterthesis{jirkovsky-thesis,
+    author = {Jirkovský, Adam},
+    title = {Benchmarking Techniques for Evaluation of Large Language Models},
+    school = {Czech Technical University in Prague, Faculty of Electrical Engineering},
+    year = 2024,
+    URL = {https://dspace.cvut.cz/handle/10467/115227}
+}
+```

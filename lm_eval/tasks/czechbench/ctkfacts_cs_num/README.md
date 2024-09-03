@@ -8,17 +8,30 @@ This dataset was obtained from [Hugging Face](https://huggingface.co/datasets/ct
 - Task: Natural Language Inference
 - Samples: 558 (Test set)
 - Few-shot examples: 5 (From training set)
+- [Hugging Face link](https://huggingface.co/datasets/ctu-aic/ctkfacts_nli)
 
 ### Task description
 
-Natural language inference is a 3-class classification problem. Each example consists of a premise text passage and a hypothesis. The premise can either support the hypothesis, refute it, or not provide enough information for either case. The model is given a premise-hypothesis pair and asked to correctly determine their relation. It replies with a number from 0 to 2 assigned to one of the classes.
+The model is asked to determine the correct relation between a premise and a hypothesis. The premise can confirm the hypothesis, refute it, or there can be no clear relation.
+This leads to a three-class classification problem.
 
-The reported metrics are classification accuracy and macro-averaged F1 score.
+The reported metrics are classification accuracy (exact_match) and macro-averaged F1 score.
 
-## License
+## Citation
 
-The dataset has no license specified by its authors.
+```bibtex
+@article{Ullrich_2023,
+   title={CsFEVER and CTKFacts: acquiring Czech data for fact verification},
+   volume={57},
+   ISSN={1574-0218},
+   url={http://dx.doi.org/10.1007/s10579-023-09654-3},
+   DOI={10.1007/s10579-023-09654-3},
+   number={4},
+   journal={Language Resources and Evaluation},
+   publisher={Springer Science and Business Media LLC},
+   author={Ullrich, Herbert and Drchal, Jan and Rýpar, Martin and Vincourová, Hana and Moravec, Václav},
+   year={2023},
+   month=may, pages={1571–1605} 
+}
+```
 
-## References
-
-[1] Ullrich et al., [CsFEVER and CTKFacts: Acquiring Czech data for fact verification](https://arxiv.org/abs/2201.11115), 2022

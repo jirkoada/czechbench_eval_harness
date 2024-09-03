@@ -12,17 +12,22 @@ The translation was performed automatically using the [wmt21-dense-24-wide-en-x]
     - Challenge: 1172 test samles
     - Easy: 2376 test samles
 - Few-shot examples: 5 (From ARC Challenge validation set)
+- [Hugging Face link](https://huggingface.co/datasets/CIIRC-NLP/arc-cs)
 
 ### Task description
 
 The model is presented with a question and a selection of (typically 4) possible answers. It needs to return a letter (A, B, C, ...) corresponding to the correct answer.
 
-The reported accuracy metric represents the percentage of correctly selected answers.
+The reported accuracy metric (exact_match) represents the percentage of correctly selected answers.
 
-## License
+## Citation
 
-The dataset is licensed under [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-
-## References
-
-[1] Clark et al., [Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge](https://arxiv.org/abs/1803.05457), 2018
+```bibtex
+@masterthesis{jirkovsky-thesis,
+    author = {Jirkovský, Adam},
+    title = {Benchmarking Techniques for Evaluation of Large Language Models},
+    school = {Czech Technical University in Prague, Faculty of Electrical Engineering},
+    year = 2024,
+    URL = {https://dspace.cvut.cz/handle/10467/115227}
+}
+```

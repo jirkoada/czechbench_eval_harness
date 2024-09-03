@@ -1,6 +1,6 @@
 # AGREE dataset
 
-The dataset was obtained from its official [site](https://nlp.fi.muni.cz/~xbaisa/agree/).
+The dataset original dataset was obtained from its official [site](https://nlp.fi.muni.cz/~xbaisa/agree/).
 
 The data were transformed to accommodate a missing word selection task. 
 Sentences containing more than one marked verb were discarded. 
@@ -15,17 +15,24 @@ Preblamatic examples were identified by gradually selecting examples wrongly ans
 - Task: Language proficiency: subject-verb agreement
 - Samples: 627 (Test set)
 - Few-shot examples: 5 (From validation set)
+- [Hugging Face link](https://huggingface.co/datasets/CIIRC-NLP/agree-cs)
 
 ### Task description
 
 The model is asked to select one of five possible forms of a verb that has been masked out in the reference sentence. All the proposed verb forms are in past tense and differ only in their ending (-la, -lo, -li, -ly, -l), which needs to correctly match the sentence subject.
 
-The reported accuracy metric represents the percentage of correctly completed sentences.
+The reported accuracy (exact_match) metric represents the percentage of correctly completed sentences.
 
-## License
+## Citation
 
-The dataset is licensed under [Creative Commons BY-NC 2.0](https://creativecommons.org/licenses/by-nc/2.0/).
-
-## References
-
-[1] Baisa, [Byte Level Language Models](https://is.muni.cz/th/139654/fi_d/), 2016
+```bibtex
+@PhdThesis{Baisa2016thesis,
+  AUTHOR = "Baisa, Vít",
+  TITLE = "Byte Level Language Models [online]",
+  YEAR = "2016 [cit. 2024-08-28]",
+  TYPE = "Disertační práce",
+  SCHOOL = "Masarykova univerzita, Fakulta informatiky, Brno",
+  NOTE = "SUPERVISOR : Karel Pala",
+  URL = "https://is.muni.cz/th/en6ay/",
+}
+```
