@@ -19,13 +19,12 @@ The reported metrics are classification accuracy (exact_match) and macro-average
 ## Citation
 
 ```bibtex
-@misc{přibáň2022czechdatasetcrosslingualsubjectivity,
-      title={Czech Dataset for Cross-lingual Subjectivity Classification}, 
-      author={Pavel Přibáň and Josef Steinberger},
-      year={2022},
-      eprint={2204.13915},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2204.13915}, 
+@article{pib2022czech,
+    title={Czech Dataset for Cross-lingual Subjectivity Classification},
+    author={Pavel Přibáň and Josef Steinberger},
+    year={2022},
+    eprint={2204.13915},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
 }
 ```
