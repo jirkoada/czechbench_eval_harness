@@ -3,7 +3,7 @@ import numpy as np
 import string
 import re
 
-labels = {"pozitivní": 0, "neutrální": 1, "negativní": 2}
+labels = {"-1": 0, "0": 1, "1": 2}
 re_ignore = [" ", "\n", "Odpověď", ",", ";", "\.", "!", "\?", ":", "'", '"', "_", "-"]
 
 def macro_f1_score(items):
@@ -29,41 +29,43 @@ def macro_f1_score(items):
 
 
 def doc_to_text(doc) -> str:
-    return f"""Urči sentiment zadaného textu výběrem jedné z těchto možností: 
-1) pozitivní
-2) negativní
-3) neutrální
-Vždy odpovídej pouze jedním slovem bez dalšího komentáře.
+    return f"""Urči sentiment zadaného textu. Odpověz číslem 1 pro pozitivní sentiment, 0 pro neutrální sentiment, nebo -1 pro negativní sentiment.
+Vždy odpovídej pouze tímto jedním číslem bez dalšího komentáře.
 
 Zde je 5 ukázkových příkladů:
 
 Text:
 Rek bych ze mekac trosku nezachapal tvoji otazku :D
 Odpověď:
-neutrální
+0
 
 Text:
 Moc krásná fotečka :-)
 Odpověď:
-pozitivní
+1
 
 Text:
 Já mám iPhone a nejde to!
 Odpověď:
-negativní
+-1
 
 Text:
 parada, konecne si je zase jeden z velkych hracu vedom nastupujici budoucnosti. Diky
 Odpověď:
-pozitivní
+1
 
 Text:
 jasně, že Vyskoká u Miskovic Kutná Hora :) hned kousíček je zřícenina Kláštera Belveder :)
 Odpověď:
-neutrální
+0
 
 Vygeneruj klasifikaci pro následující příklad:
 Text:
 {doc['comment']}
 Odpověď:
 """
+
+
+def doc_to_target(doc) -> int:
+    # because categories are indexed from 1
+    return int(doc['sentiment_int']) + 1

@@ -3,7 +3,7 @@ import numpy as np
 import string
 import re
 
-labels = {"subjektivní": 0, "objektivní": 1}
+labels = {"0": 0, "1": 1}
 re_ignore = [" ", "\n", "Odpověď", ",", ";", "\.", "!", "\?", ":", "'", '"', "_", "-"]
 
 def macro_f1_score(items):
@@ -22,9 +22,6 @@ def macro_f1_score(items):
     predictions = np.char.translate(predictions, table=repl_table)
     references = np.char.translate(references, table=repl_table)
 
-    print(references)
-    print(predictions)
-
     golds = [labels[g] for g in references]
     preds = [labels[p] if p in labels.keys() else -1 for p in predictions]
     fscore = f1_score(golds, preds, average="macro")
@@ -32,35 +29,35 @@ def macro_f1_score(items):
 
 
 def doc_to_text(doc) -> str:
-    return f"""Urči zda zadaný výrok vyjadřuje subjektivní názor, nebo objektivní skutečnost. Odpovídej vždy pouze slovem "subjektivní", nebo "objektivní".
+    return f"""Urči zda zadaný výrok vyjadřuje subjektivní názor, nebo objektivní skutečnost. Odpověz číslem 0 pro subjektivní názor, nebo 1 pro objektivní skutečnost.
+Vždy odpovídej pouze tímto jedním číslem bez dalšího komentáře.
 
 Zde je 5 ukázkových příkladů:
 
 Text:
 Stejně vynikající jako jednička s ještě spletitějším dějem a s dokonalou vizí budoucnosti.	
 Odpověď:
-subjektivní
+0
 
 Text:
 A tak se odvíjí příběhy 4 krásných slečen, které mají zdánlivě vše i svá tajemství, jenž by neměla být objevena.	
 Odpověď:
-objektivní
+1
 
 Text:
 Na muj vkus az moc "kecaci" a malo akce.	
 Odpověď:
-subjektivní
+0
 
 Text:
 Dokument zachycuje příběhy čtyř lidí z Noveldy, kteří bojují za splnění svých snů přesto, že se setkávají se spoustou obtíží.	
 Odpověď:
-objektivní
+1
 
 Text:
 A musím se přiznat, že sem ani jednou neusnul, ačkoli je to bezmála dvouhodinová nuda jako prase.	
 Odpověď:
-subjektivní
-
+0
 Vygeneruj klasifikaci pro následující příklad:
 Text:
 {doc['text']}
