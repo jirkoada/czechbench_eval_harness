@@ -34,16 +34,16 @@ pip install -e ".[api]"
 
 Please refer to the following examples, on how to evaluate different model types on CzechBench. For a complete documentation on supported models and available evaluation arguments, please examine the main [README](../../../README.md) file.
 
-Evaluating a model hosted on Hugging Face on the whole CzechBench suite:
+Evaluating a model hosted on Hugging Face on the whole CzechBench suite (single GPU):
 
 ```bash
 lm_eval --model hf \
-    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \  # Load Gemma 2 9B using its recommended dtype
-    --apply_chat_template \  # Ensure correct input format
-    --tasks czechbench_tasks \  # Evaluate on the full CzechBench benchmark collection
-    --device cuda:0 \  # Use a single GPU
-    --batch_size auto \  # Automatically determine optimal batch size
-    --output_path ~/logs/  # Save results into the 'logs' folder
+    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
+    --apply_chat_template \
+    --tasks czechbench_tasks \
+    --device cuda:0 \
+    --batch_size auto \
+    --output_path ~/logs/
 ```
 
 Selecting individual evaluation tasks (refer to the table above for task IDs):
@@ -52,7 +52,7 @@ Selecting individual evaluation tasks (refer to the table above for task IDs):
 lm_eval --model hf \
     --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
     --apply_chat_template \
-    --tasks agree_cs,belebele_cs,truthfulqa_cs \  # List of individual evaluation tasks
+    --tasks agree_cs,belebele_cs,truthfulqa_cs \
     --device cuda:0 \
     --batch_size auto \
     --output_path ~/logs/
@@ -62,7 +62,7 @@ Using multiple GPUs:
 
 ```bash
 lm_eval --model hf \
-    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16,parallelize=True \  # Split the model across available GPUs
+    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16,parallelize=True \
     --apply_chat_template \
     --tasks czechbench_tasks \
     --batch_size auto \
@@ -73,7 +73,7 @@ Evaluating an Anthropic chat model:
 
 ```bash
 lm_eval --model anthropic-chat-completions \
-    --model_args model="claude-3-haiku-20240307" \  # Evaluate the Claude 3 Haiku model
+    --model_args model="claude-3-haiku-20240307" \
     --apply_chat_template \
     --tasks czechbench_tasks \
     --output_path ~/logs/
@@ -83,7 +83,7 @@ Evaluating an OpenAI chat model:
 
 ```bash
 lm_eval --model openai-chat-completions \
-    --model_args model="gpt-4o-mini" \  # Evaluate the GPT-4o-mini model
+    --model_args model="gpt-4o-mini" \
     --apply_chat_template \
     --tasks czechbench_tasks \
     --output_path ~/logs/
