@@ -1,0 +1,6 @@
+"dataset_name": "human_sexuality"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_social_sciences"
+"task": "mmlu_en_human_sexuality"
+"task_alias": "human sexuality"

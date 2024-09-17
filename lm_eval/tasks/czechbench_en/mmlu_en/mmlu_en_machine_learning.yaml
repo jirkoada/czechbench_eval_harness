@@ -1,0 +1,6 @@
+"dataset_name": "machine_learning"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_stem"
+"task": "mmlu_en_machine_learning"
+"task_alias": "machine learning"

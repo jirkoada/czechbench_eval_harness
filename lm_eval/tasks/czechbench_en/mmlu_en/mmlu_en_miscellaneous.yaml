@@ -1,0 +1,6 @@
+"dataset_name": "miscellaneous"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_other"
+"task": "mmlu_en_miscellaneous"
+"task_alias": "miscellaneous"

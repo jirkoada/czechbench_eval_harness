@@ -1,0 +1,6 @@
+"dataset_name": "high_school_computer_science"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_stem"
+"task": "mmlu_en_high_school_computer_science"
+"task_alias": "high school computer science"

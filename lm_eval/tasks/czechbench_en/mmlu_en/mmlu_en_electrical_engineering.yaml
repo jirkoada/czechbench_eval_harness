@@ -1,0 +1,6 @@
+"dataset_name": "electrical_engineering"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_stem"
+"task": "mmlu_en_electrical_engineering"
+"task_alias": "electrical engineering"

@@ -1,0 +1,6 @@
+"dataset_name": "college_biology"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_stem"
+"task": "mmlu_en_college_biology"
+"task_alias": "college biology"

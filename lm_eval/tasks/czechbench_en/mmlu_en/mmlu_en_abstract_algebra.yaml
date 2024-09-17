@@ -1,0 +1,6 @@
+"dataset_name": "abstract_algebra"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_stem"
+"task": "mmlu_en_abstract_algebra"
+"task_alias": "abstract algebra"

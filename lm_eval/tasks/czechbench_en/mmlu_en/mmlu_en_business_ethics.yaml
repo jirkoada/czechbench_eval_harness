@@ -1,0 +1,6 @@
+"dataset_name": "business_ethics"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_other"
+"task": "mmlu_en_business_ethics"
+"task_alias": "business ethics"

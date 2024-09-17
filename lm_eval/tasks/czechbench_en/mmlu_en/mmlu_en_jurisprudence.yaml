@@ -1,0 +1,6 @@
+"dataset_name": "jurisprudence"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_humanities"
+"task": "mmlu_en_jurisprudence"
+"task_alias": "jurisprudence"

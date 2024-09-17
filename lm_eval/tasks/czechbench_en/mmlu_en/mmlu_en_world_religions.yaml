@@ -1,0 +1,6 @@
+"dataset_name": "world_religions"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_humanities"
+"task": "mmlu_en_world_religions"
+"task_alias": "world religions"

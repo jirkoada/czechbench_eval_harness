@@ -1,0 +1,6 @@
+"dataset_name": "sociology"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_social_sciences"
+"task": "mmlu_en_sociology"
+"task_alias": "sociology"

@@ -1,0 +1,6 @@
+"dataset_name": "conceptual_physics"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_stem"
+"task": "mmlu_en_conceptual_physics"
+"task_alias": "conceptual physics"

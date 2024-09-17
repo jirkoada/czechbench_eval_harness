@@ -1,0 +1,6 @@
+"dataset_name": "public_relations"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_social_sciences"
+"task": "mmlu_en_public_relations"
+"task_alias": "public relations"

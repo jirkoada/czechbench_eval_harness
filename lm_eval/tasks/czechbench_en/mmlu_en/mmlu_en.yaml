@@ -1,0 +1,10 @@
+group: mmlu_en
+task:
+- mmlu_en_stem
+- mmlu_en_other
+- mmlu_en_social_sciences
+- mmlu_en_humanities
+aggregate_metric_list:
+  - metric: exact_match
+    weight_by_size: True
+    filter_list: "flexible-extract"

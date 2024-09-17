@@ -1,0 +1,6 @@
+"dataset_name": "college_medicine"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_other"
+"task": "mmlu_en_college_medicine"
+"task_alias": "college medicine"

@@ -1,0 +1,6 @@
+"dataset_name": "high_school_government_and_politics"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_social_sciences"
+"task": "mmlu_en_high_school_government_and_politics"
+"task_alias": "high school government and politics"

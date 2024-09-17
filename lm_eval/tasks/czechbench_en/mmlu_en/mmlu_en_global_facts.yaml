@@ -1,0 +1,6 @@
+"dataset_name": "global_facts"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_other"
+"task": "mmlu_en_global_facts"
+"task_alias": "global facts"

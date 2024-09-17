@@ -1,0 +1,6 @@
+"dataset_name": "high_school_world_history"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_humanities"
+"task": "mmlu_en_high_school_world_history"
+"task_alias": "high school world history"

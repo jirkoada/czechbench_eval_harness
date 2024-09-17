@@ -1,0 +1,35 @@
+task: subjectivity_en
+dataset_path: CIIRC-NLP/czech-subjectivity-en
+output_type: generate_until
+test_split: test
+training_split: train
+validation_split: validation
+doc_to_text: !function utils.doc_to_text
+doc_to_target: !function utils.doc_to_target
+doc_to_choice: ["0", "1"]
+generation_kwargs:
+  until: "\n"
+  max_gen_toks: 32
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+    regexes_to_ignore:
+      - " "
+      - "\n"
+      - "Answer"
+      - "[,;.!?:'\"_-]"
+  - metric: f1
+    aggregation: !function utils.macro_f1_score
+    higher_is_better: true
+filter_list:
+  - name: "flexible-extract"
+    filter:
+      - function: "regex"
+        group_select: -1
+        regex_pattern: "[0-9]+"
+      - function: "take_first"
+metadata:
+  version: 1.0

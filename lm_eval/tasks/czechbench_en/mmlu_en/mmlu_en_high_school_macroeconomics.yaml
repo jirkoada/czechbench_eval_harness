@@ -1,0 +1,6 @@
+"dataset_name": "high_school_macroeconomics"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_social_sciences"
+"task": "mmlu_en_high_school_macroeconomics"
+"task_alias": "high school macroeconomics"

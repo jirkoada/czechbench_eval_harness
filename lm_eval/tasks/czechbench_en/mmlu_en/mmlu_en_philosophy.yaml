@@ -1,0 +1,6 @@
+"dataset_name": "philosophy"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_humanities"
+"task": "mmlu_en_philosophy"
+"task_alias": "philosophy"

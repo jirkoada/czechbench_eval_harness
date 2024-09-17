@@ -1,0 +1,6 @@
+"dataset_name": "security_studies"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_social_sciences"
+"task": "mmlu_en_security_studies"
+"task_alias": "security studies"

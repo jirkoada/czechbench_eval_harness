@@ -1,0 +1,6 @@
+"dataset_name": "elementary_mathematics"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_stem"
+"task": "mmlu_en_elementary_mathematics"
+"task_alias": "elementary mathematics"

@@ -1,0 +1,11 @@
+group: czechbench_english
+task:
+  - anli_en
+  - arc_easy_en
+  - arc_challenge_en
+  - belebele_en
+  - ctkfacts_en
+  - gsm8k_en
+  - mmlu_en
+  - subjectivity_en
+  - truthfulqa_en

@@ -1,0 +1,6 @@
+"dataset_name": "moral_disputes"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_humanities"
+"task": "mmlu_en_moral_disputes"
+"task_alias": "moral disputes"

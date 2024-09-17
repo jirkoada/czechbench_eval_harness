@@ -1,0 +1,6 @@
+"dataset_name": "clinical_knowledge"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_other"
+"task": "mmlu_en_clinical_knowledge"
+"task_alias": "clinical knowledge"

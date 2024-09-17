@@ -1,0 +1,6 @@
+"dataset_name": "college_mathematics"
+"dataset_path": "cais/mmlu"
+"include": "default_template.yaml"
+"tag": "mmlu_en_stem"
+"task": "mmlu_en_college_mathematics"
+"task_alias": "college mathematics"
