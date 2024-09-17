@@ -19,7 +19,7 @@ metric_list:
       - "(?s).*#### "
       - "\\.$"
 generation_kwargs:
-  max_gen_toks: 256
+  max_gen_toks: 512
   until: "\n\n\n"
 filter_list:
   - name: "strict-match"
