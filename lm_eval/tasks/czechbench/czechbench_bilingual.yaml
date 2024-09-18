@@ -1,12 +1,11 @@
 group: czechbench_bilingual
-group_alias: Mean relative accuracy difference (Czech vs English)
 task:
   - anli_cs
   - anli_en
-  - arc_easy_cs
-  - arc_easy_en
   - arc_challenge_cs
   - arc_challenge_en
+  - arc_easy_cs
+  - arc_easy_en
   - belebele_cs
   - belebele_en
   - ctkfacts_cs
@@ -19,6 +18,3 @@ task:
   - subjectivity_en
   - truthfulqa_cs
   - truthfulqa_en
-aggregate_metric_list:
-  - metric: exact_match
-    aggregation: !function utils.lang_diff
