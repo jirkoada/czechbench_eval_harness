@@ -88,3 +88,58 @@ lm_eval --model openai-chat-completions \
     --tasks czechbench_tasks \
     --output_path ~/logs/
 ```
+
+## Bilingual evaluation
+
+Apart from comparing the performance of individual models, CzechBench also enables direct comparison of results achieved by a single LLM in equivalent Czech and English benchmarks. The provided [CzechBench EN](../czechbench_en/) collection contains equivalent English variants for 9 of the above-described evaluation tasks. These utilize the original English datasets as well as the CTKFacts and Subjectivity benchmarks, which were translated from the Czech language.
+
+To evaluate a model on the English version of CzechBench, you can use the following example:
+
+```bash
+lm_eval --model hf \
+    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
+    --apply_chat_template \
+    --tasks czechbench_english \
+    --device cuda:0 \
+    --batch_size auto \
+    --output_path ~/logs/
+```
+
+You can also perform simultaneous evaluation on both versions of the supported tasks:
+
+```bash
+lm_eval --model hf \
+    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
+    --apply_chat_template \
+    --tasks czechbench_bilingual \
+    --device cuda:0 \
+    --batch_size auto \
+    --output_path ~/logs/
+```
+
+### Result analysis
+
+To closely examine the differences in performance, use the [bilingual_analysis](bilingual_analysis.py) script. It can provide both tabular and graphical comparison of individual results, as well as additional statistics.
+
+The script accepts up to two positional arguments representing paths to the json files generated during evaluation. If only one path is provided, it is expected to to contain results of the [czechbench_bilingual](czechbench_bilingual.yaml) task collection. If two paths are provided, they must contain separate results of [czechbench_tasks](czechbench_tasks.yaml) and [czechbench_english](../czechbench_en/czechbench_english.yaml) evaluation runs. There are also two additional options for toggling the creation of a results comparison graph, and its optional saving to a provided output path.
+
+Using the script may require additional installation of the Matplotlib package:
+
+```bash
+pip install matplotlib
+```
+
+Single file analysis example:
+
+```bash
+cd lm_eval/tasks/czechbench
+python3 bilingual_analysis.py '~/logs/my_model/czechbench_bilingual.json' -g -o ~/figures/graph.png
+```
+
+Analysis of separate result files:
+
+```bash
+cd lm_eval/tasks/czechbench
+python3 bilingual_analysis.py '~/logs/my_model/czechbench_tasks.json' ~/logs/my_model/czechbench_english.json -g -o ~/figures/graph.png
+```
+
