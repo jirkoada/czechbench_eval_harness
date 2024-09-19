@@ -1,6 +1,6 @@
 # CzechBench - English task variants
 
-This collection contains English variants of 9 evaluation tasks included in the main [CzechBench](../czechbench/) suite. Task implementations are identical to the Czech variants in order to provide fair and direct result comparison. The results obtained here may thus differ from the official benchmarks implementations included in the LM Evaluation Harness framework.
+This collection contains English variants of 9 evaluation tasks included in the main [CzechBench](../czechbench/) suite. Task implementations are identical to the Czech variants in order to provide fair and direct result comparison. The results obtained here may thus differ from the official benchmark implementations included in the LM Evaluation Harness framework.
 
 | Dataset                                                      | Language                      | Task type                  | Metrics        | Samples | Task ID         |
 | ------------------------------------------------------------ | ----------------------------- | -------------------------- | -------------- | ------: | --------------- |
