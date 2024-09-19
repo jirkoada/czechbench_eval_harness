@@ -140,6 +140,6 @@ Analysis of separate result files:
 
 ```bash
 cd lm_eval/tasks/czechbench
-python3 bilingual_analysis.py '~/logs/my_model/czechbench_tasks.json' ~/logs/my_model/czechbench_english.json -g -o ~/figures/graph.png
+python3 bilingual_analysis.py '~/logs/my_model/czechbench_tasks.json' '~/logs/my_model/czechbench_english.json' -g -o ~/figures/graph.png
 ```
 
