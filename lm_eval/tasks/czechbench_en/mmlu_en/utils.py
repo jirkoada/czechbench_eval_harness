@@ -1,8 +1,10 @@
 from datasets import load_dataset
 
+dev_mmlu = load_dataset("cais/mmlu", 'all', split="dev")
+
 def get_topic_shots(test_topic):
     # Filter the dataset for the specific test topic
-    dev_set = load_dataset("cais/mmlu", test_topic, split="dev")
+    dev_set = dev_mmlu.filter(lambda example: example['subject'] == test_topic)
     # Determine the number of shots based on the topic
     #shot_num = 1 if test_topic in ["high_school_european_history", "high_school_us_history", "high_school_world_history", "security_studies"] else 5
     shot_num = 5
