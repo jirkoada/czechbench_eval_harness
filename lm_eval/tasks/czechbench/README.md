@@ -69,6 +69,22 @@ lm_eval --model hf \
     --output_path ~/logs/
 ```
 
+Accelerating inference with vLLM:
+
+```bash
+pip install vllm
+```
+
+```bash
+lm_eval --model vllm \
+    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
+    --apply_chat_template \
+    --tasks czechbench_tasks \
+    --device cuda:0 \
+    --batch_size auto \
+    --output_path ~/logs/
+```
+
 Evaluating an Anthropic chat model:
 
 ```bash
