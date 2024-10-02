@@ -69,7 +69,7 @@ lm_eval --model hf \
     --output_path ~/logs/
 ```
 
-Accelerating inference with vLLM:
+Accelerating inference with vLLM (may affect evaluation results):
 
 ```bash
 pip install vllm
