@@ -34,31 +34,7 @@ pip install -e ".[api]"
 
 Please refer to the following examples, on how to evaluate different model types on CzechBench. For a complete documentation on supported models and available evaluation arguments, please examine the main [README](../../../README.md) file.
 
-Evaluating a model hosted on Hugging Face on the whole CzechBench suite (single GPU):
-
-```bash
-lm_eval --model hf \
-    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
-    --apply_chat_template \
-    --tasks czechbench_tasks \
-    --device cuda:0 \
-    --batch_size auto \
-    --output_path ~/logs/
-```
-
-Selecting individual evaluation tasks (refer to the table above for task IDs):
-
-```bash
-lm_eval --model hf \
-    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
-    --apply_chat_template \
-    --tasks agree_cs,belebele_cs,truthfulqa_cs \
-    --device cuda:0 \
-    --batch_size auto \
-    --output_path ~/logs/
-```
-
-Using multiple GPUs:
+Evaluating a model hosted on Hugging Face on the whole CzechBench suite (with multi-GPU support):
 
 ```bash
 lm_eval --model hf \
@@ -69,20 +45,27 @@ lm_eval --model hf \
     --output_path ~/logs/
 ```
 
-Accelerating inference with vLLM (may affect evaluation results):
+Selecting individual evaluation tasks (refer to the table above for task IDs):
 
 ```bash
-pip install vllm
-```
-
-```bash
-lm_eval --model vllm \
-    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
+lm_eval --model hf \
+    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16,parallelize=True \
     --apply_chat_template \
-    --tasks czechbench_tasks \
-    --device cuda:0 \
+    --tasks agree_cs,belebele_cs,truthfulqa_cs \
     --batch_size auto \
     --output_path ~/logs/
+```
+
+Using cache to recover interrupted evaluations:
+
+```bash
+lm_eval --model hf \
+    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16,parallelize=True \
+    --apply_chat_template \
+    --tasks czechbench_tasks \
+    --batch_size auto \
+    --output_path ~/logs/ \
+    --use_cache ~/eval_cache/gemma-2-9b-it
 ```
 
 Evaluating an Anthropic chat model:
@@ -113,10 +96,9 @@ To evaluate a model on the English version of CzechBench, you can use the follow
 
 ```bash
 lm_eval --model hf \
-    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
+    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16,parallelize=True \
     --apply_chat_template \
     --tasks czechbench_english \
-    --device cuda:0 \
     --batch_size auto \
     --output_path ~/logs/
 ```
@@ -125,11 +107,10 @@ You can also perform simultaneous evaluation on both versions of the supported t
 
 ```bash
 lm_eval --model hf \
-    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16 \
+    --model_args pretrained=google/gemma-2-9b-it,dtype=bfloat16,parallelize=True \
     --apply_chat_template \
     --tasks czechbench_bilingual \
     --device cuda:0 \
-    --batch_size auto \
     --output_path ~/logs/
 ```
 
