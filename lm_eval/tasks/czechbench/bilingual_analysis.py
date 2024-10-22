@@ -24,6 +24,7 @@ task_display_names = {
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)
     files = args.files
+    model_name = ""
 
     if len(files) == 1:
         try:
@@ -31,6 +32,7 @@ if __name__ == "__main__":
                 data = json.load(f)
 
             czech_results = english_results = data["results"]
+            model_name = data["model_name"]
         except:
             raise Exception("Input file could not be parsed. Please provide a valid CzechBench Bilingual result file.")
         
@@ -42,6 +44,7 @@ if __name__ == "__main__":
             with open(files[1], "r") as f:
                 data = json.load(f)
             english_results = data["results"]
+            model_name = data["model_name"]
             if "czechbench_english" in czech_results.keys():
                 print("Result files automatically swapped.")
                 czech_results, english_results = english_results, czech_results
@@ -85,7 +88,7 @@ if __name__ == "__main__":
     print("Mean relative accuracy difference:", df["Relative Difference"].mean())
 
     if args.graph:
-        ax = df.plot.barh(x='Task', y=['Czech', 'English'], ylabel="Task", xlabel="Accuracy [%]", title="Czech vs. English Results Comparison", figsize=(11, 7)) 
+        ax = df.plot.barh(x='Task', y=['Czech', 'English'], color=['#1f77b4', '#ff3333'], ylabel="Task", xlabel="Accuracy [%]", title=f"Czech vs. English Results Comparison: {model_name}", figsize=(11, 7)) 
         ax.invert_yaxis()
         for container in ax.containers:
             ax.bar_label(container, fontsize='medium', fmt="%.1f")
